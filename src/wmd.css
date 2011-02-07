@@ -3,8 +3,7 @@
 {
 	margin-left: 25%;
 	margin-right: 25%;
-	width: 50%;
-	min-width: 500px;
+	width: 500px;
 }
 
 #wmd-editor
@@ -19,15 +18,20 @@
 
 .wmd-input 
 { 
-	height: 500px;
-	width: 100%;
-	background-color: #DCDCDC;
-	border: 1px solid #333;
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	height: 250px;
+	width: 500px;
+	background-color: #FFF;
+	border: 1px solid #DDD;
 }
 
 .wmd-preview 
 { 
-	background-color: #EEE; 
+	background-color: #FFF;
+	border: 1px dotted #ddd; 
+	padding: 5px;
 	overflow: auto;
 }
 
