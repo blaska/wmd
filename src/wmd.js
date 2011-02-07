@@ -1476,16 +1476,17 @@ var wmdBase = function(wmd, wmd_options){ // {{{
                 return button;
             }
             
-            function addSpacer() {
+						// FIXME: Ugly hack to add unique css class to spacers for proper positioning
+            function addSpacer(count) {
                 var spacer = document.createElement("li");
-                spacer.className = "wmd-spacer";
+                spacer.className = "wmd-spacer wmd-spacer-" + count;
                 buttonRow.appendChild(spacer);
                 return spacer;
             }
             
             var boldButton = addButton("wmd-bold-button", "Strong <strong> Ctrl+B", command.doBold);
             var italicButton = addButton("wmd-italic-button", "Emphasis <em> Ctrl+I", command.doItalic);
-            var spacer1 = addSpacer();
+            var spacer1 = addSpacer(1);
             
             var linkButton = addButton("wmd-link-button", "Hyperlink <a> Ctrl+L", function(chunk, postProcessing, useDefaultText) {
                 return command.doLinkOrImage(chunk, postProcessing, false);
@@ -1496,7 +1497,7 @@ var wmdBase = function(wmd, wmd_options){ // {{{
                 return command.doLinkOrImage(chunk, postProcessing, true);
             });
             
-            var spacer2 = addSpacer();
+            var spacer2 = addSpacer(2);
 
             var olistButton = addButton("wmd-olist-button", "Numbered List <ol> Ctrl+O", function(chunk, postProcessing, useDefaultText) {
                 command.doList(chunk, postProcessing, true, useDefaultText);
@@ -1506,7 +1507,7 @@ var wmdBase = function(wmd, wmd_options){ // {{{
             });
             var headingButton = addButton("wmd-heading-button", "Heading <h1>/<h2> Ctrl+H", command.doHeading);
             var hrButton = addButton("wmd-hr-button", "Horizontal Rule <hr> Ctrl+R", command.doHorizontalRule);
-            var spacer3 = addSpacer();
+            var spacer3 = addSpacer(3);
             
             var undoButton = addButton("wmd-undo-button", "Undo - Ctrl+Z");
             undoButton.execute = function(manager){
