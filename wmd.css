@@ -9,28 +9,26 @@
 
 #wmd-editor
 {
-	background-color: Aquamarine;
+	background-color: #FFF;
 }
 
 .wmd-button-bar 
 {
 	width: 100%;
-	/*
-	background-color: Silver; 
-	*/
 }
 
 .wmd-input 
 { 
 	height: 500px;
 	width: 100%;
-	background-color: Gainsboro;
-	border: 1px solid DarkGray;
+	background-color: #DCDCDC;
+	border: 1px solid #333;
 }
 
 .wmd-preview 
 { 
-	background-color: LightGray; 
+	background-color: #EEE; 
+	overflow: auto;
 }
 
 .wmd-output 
@@ -56,10 +54,14 @@
 	margin-left: 14px;
 	
 	position: absolute;
-	background-color: Silver;
+	background-color: #CCC;
 	display: inline-block; 
 	list-style: none;
 }
+
+.wmd-spacer-1 { left: 50px; }
+.wmd-spacer-2 { left: 175px; }
+.wmd-spacer-3 { left: 300px; }
 
 .wmd-button
 {
@@ -109,7 +111,7 @@
 
 .wmd-prompt-background
 {
-	background-color: Black;
+	background-color: #000;
 }
 
 .wmd-prompt-dialog
