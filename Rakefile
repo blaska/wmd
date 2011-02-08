@@ -5,7 +5,7 @@ JS_SOURCE_FILES  = ['src/jquery.wmd.plugin.js', 'src/showdown.js', 'src/wmd.js']
 CSS_SOURCE_FILE  = ['src/wmd.css'].map.join(" ")
 COMPILER_PATH    = '~/utilities/closure-compiler/compiler.jar'
 JS_OUTPUT_FILE   = 'minified/jquery.wmd.min.js'
-CSS_OUTPUT_FILE  = 'minified/wmd.css'
+CSS_OUTPUT_FILE  = 'minified/wmd.min.css'
 
 desc "Compile Javascript with Google Closure Compiler & move JS/CSS/Image files to minified directory"
 task :compile do
